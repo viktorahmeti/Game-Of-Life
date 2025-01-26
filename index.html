@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./meta/ios/180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./meta/ios/32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./meta/ios/16.png">
+    <meta name="theme-color" content="#0f0f0f">
+    <meta name="description" content="A simple implementation of Conway's game of life, Retro style">
+    <meta property="og:url" content="https://viktorahmeti.github.io/Game-Of-Life/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Conway's Game Of Life - Retro">
+    <meta property="og:description" content="A simple implementation of Conway's game of life, Retro style">
+    <meta property="og:image" content="https://viktorahmeti.github.io/Game-Of-Life/meta/screenshot.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="viktorahmeti.me">
+    <meta property="twitter:url" content="https://viktorahmeti.github.io/Game-Of-Life/">
+    <meta name="twitter:title" content="Conway's Game Of Life - Retro">
+    <meta name="twitter:description" content="A simple implementation of Conway's game of life, Retro style">
+    <meta name="twitter:image" content="https://viktorahmeti.github.io/Game-Of-Life/meta/screenshot.png">
+
+
+    <link rel="manifest" href="meta/manifest.json" />
+    <title>Game Of Life</title>
+</head>
+<body>
+    <div id="game-container">
+        <h1 id="game-title">Conway's Game&nbsp;Of&nbsp;Life</h1>
+        <div id="buttons">
+            <input id="zoom-input" type="range" min="25" max="100" step="1" value="50">
+            <span id="restart-button"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 547.842 547.842"xml:space="preserve"><g><path d="M506.367,293.097h-43.836c-11.092,0-20.043,8.874-20.426,19.813c-9.104,84.609-80.707,150.476-167.84,150.476c-93.253,0-168.759-75.429-168.759-168.529c0-92.258,76.041-167.229,168.071-168.529v27.387c0,12.47,8.874,18.054,19.737,12.47l140.684-71.986c10.863-5.585,10.863-14.612,0-20.196L293.314,2.168c-10.863-5.584-19.737,0-19.737,12.393v27.616C134.882,43.478,21.127,156.239,21.127,295.01c0,139.612,113.296,252.832,253.139,252.832c133.723,0,243.27-103.504,252.449-234.778C526.791,302.048,517.535,293.097,506.367,293.097z"/></g></svg></span>
+            <span id="start-button"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"viewBox="0 0 17.804 17.804" xml:space="preserve"><g><g id="c98_play"><path d="M2.067,0.043C2.21-0.028,2.372-0.008,2.493,0.085l13.312,8.503c0.094,0.078,0.154,0.191,0.154,0.313c0,0.12-0.061,0.237-0.154,0.314L2.492,17.717c-0.07,0.057-0.162,0.087-0.25,0.087l-0.176-0.04c-0.136-0.065-0.222-0.207-0.222-0.361V0.402C1.844,0.25,1.93,0.107,2.067,0.043z"/></g><g id="Capa_1_78_"></g></g></svg></span>
+            <span id="pause-button"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M120.16 45A20.162 20.162 0 0 0 100 65.16v381.68A20.162 20.162 0 0 0 120.16 467h65.68A20.162 20.162 0 0 0 206 446.84V65.16A20.162 20.162 0 0 0 185.84 45h-65.68zm206 0A20.162 20.162 0 0 0 306 65.16v381.68A20.162 20.162 0 0 0 326.16 467h65.68A20.162 20.162 0 0 0 412 446.84V65.16A20.162 20.162 0 0 0 391.84 45h-65.68z"/></svg></span>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
