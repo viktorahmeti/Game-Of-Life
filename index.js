@@ -143,12 +143,29 @@ class GameOfLife{
         let startSqY = Math.floor(-this.translateY / this.gridSize);
         let endSqY = startSqY + Math.floor(this.height / this.gridSize) + 1;
 
-        for (let i = startSqX; i <= endSqX; i++){
-            for (let j = startSqY; j <= endSqY; j++){
-                if (this.entries.has(JSON.stringify([i, j]))){
-                    let startX = Math.floor(this.translateX + (this.gridSize * i));
-                    let startY = Math.floor(this.translateY + (this.gridSize * j));
+        let numCells = (endSqX - startSqX) * (endSqY - startSqY);
 
+        //for performance reasons
+        if (numCells < this.entries.size){
+            for (let i = startSqX; i <= endSqX; i++){
+                for (let j = startSqY; j <= endSqY; j++){
+                    if (this.entries.has(JSON.stringify([i, j]))){
+                        let startX = Math.floor(this.translateX + (this.gridSize * i));
+                        let startY = Math.floor(this.translateY + (this.gridSize * j));
+    
+                        this.ctx.fillRect(startX, startY, this.gridSize, this.gridSize);
+                    }
+                }
+            }
+        }
+        else {
+            for (let entry of this.entries){
+                let [x, y] = JSON.parse(entry);
+
+                if (x >= startSqX && x <= endSqX && y >= startSqY && y <= endSqY){
+                    let startX = Math.floor(this.translateX + (this.gridSize * x));
+                    let startY = Math.floor(this.translateY + (this.gridSize * y));
+    
                     this.ctx.fillRect(startX, startY, this.gridSize, this.gridSize);
                 }
             }
